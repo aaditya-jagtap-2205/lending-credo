@@ -257,3 +257,6 @@ The suite covers the loan amount floor and ceiling, the £1,000,000 threshold, e
 - **Policy as configuration.** Credit policy changes without a redeploy. Thresholds would move out of code, and each application would store the policy version that judged it, for audit.
 - **Reason codes.** Decisions currently return English strings; production would return a code with presentation-layer lookup.
 - **Authentication, rate limiting and an audit trail** of who submitted what — out of scope here, essential in production.
+
+## P.S 
+- This project was created with help of Claude AI, ChatGPT and Creativity ✨
