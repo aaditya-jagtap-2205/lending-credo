@@ -51,10 +51,13 @@ Credo follows a layered client-server architecture:
 
 Request flow:
 
-```
-React  →  LoansController  →  LoanApplicationService  →  LoanDecisionService
-                                        ↓
-                                   EF Core  →  SQLite
+```mermaid
+flowchart TD
+    A[React Frontend] --> B[LoansController]
+    B --> C[LoanApplicationService]
+    C --> D[LoanDecisionService]
+    C --> E[EF Core]
+    E --> F[(SQLite)]
 ```
 
 `LoanDecisionService` is a pure class with no dependency on HTTP, EF Core or I/O. No lending rule lives in the controller or the frontend, and entities never cross the API boundary — everything is mapped to DTOs.
